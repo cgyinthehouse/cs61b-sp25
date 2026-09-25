@@ -13,6 +13,9 @@ public class JavaExercises {
      */
     public static void starTriangle() {
         // TODO: Fill in this function
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(" ".repeat(5 - i) + "*".repeat(i));
+        }
     }
 
     /**
@@ -21,6 +24,10 @@ public class JavaExercises {
      */
     public static void printIndexed(String s) {
         // TODO: Fill in this function
+        for (int i = 0; i < s.length(); i++) {
+            System.out.print(s.charAt(i));
+            System.out.print(s.length() - 1 - i);
+        }
     }
 
     /**
@@ -29,21 +36,29 @@ public class JavaExercises {
      */
     public static String stutter(String s) {
         // TODO: Fill in this function
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            sb.append(c).append(c);
+        }
+        return sb.toString();
     }
 
     /**
      * Determines the quadrant of a Cartesian coordinate (x, y).
      * Returns:
-     *   1 for the first quadrant (x > 0, y > 0),
-     *   2 for the second quadrant (x < 0, y > 0),
-     *   3 for the third quadrant (x < 0, y < 0),
-     *   4 for the fourth quadrant (x > 0, y < 0),
-     *   0 if the point lies on an axis.
+     * 1 for the first quadrant (x > 0, y > 0),
+     * 2 for the second quadrant (x < 0, y > 0),
+     * 3 for the third quadrant (x < 0, y < 0),
+     * 4 for the fourth quadrant (x > 0, y < 0),
+     * 0 if the point lies on an axis.
      */
     public static int quadrant(int x, int y) {
-        // TODO: Fill in this function
-        return 0;
+        if (x == 0 || y == 0) return 0;
+        if (x > 0) {
+            return y > 0 ? 1 : 4;
+        } else {
+            return y > 0 ? 2 : 3;
+        }
     }
 
     public static void main(String[] args) {
