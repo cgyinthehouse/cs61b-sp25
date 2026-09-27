@@ -1,3 +1,6 @@
+# Zed jdtls local project files (not part of the official skeleton)
+/zed-java-setup.sh
+
 ### IntelliJ IDEA ###
 **/out/
 !**/src/main/**/out/
