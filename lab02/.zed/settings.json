@@ -1,0 +1,7 @@
+{
+  "terminal": {
+    "env": {
+      "CLASSPATH": "../../library-sp25/*"
+    }
+  }
+}
